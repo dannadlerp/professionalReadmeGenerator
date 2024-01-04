@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express.js": "^1.0.0",
     "inquirer": "8.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }

@@ -34,8 +34,10 @@ inquirer
         message: 'How do you run the project?',
     },
     {
-        name: 'licence',
-        message: 'What kind of licence does the project have?',
+        type: 'checkbox',
+        name: 'license',
+        choices: ["MIT", "GPLv3", "LGPLv3"],
+        message: 'What kind of license does the project have?',
     },
 ])
 
@@ -47,10 +49,10 @@ inquirer
     whatSolved = `What did the App resolve? ${answers.whatSolved}`;
     whatLearned = `What was learned from the App development: ${answers.whatLearned}`;
     runInstructions = `Instructions to run App: ${answers.runInstructions}`;
-    licence = `App Licence: ${answers.licence}`;
+    license = `App License: ${answers.license}`;
     
     //below creates an array with all answers so it can be displayed in the new file
-    const questions = [title, whatMotiv, why, whatSolved, whatLearned, runInstructions, licence];
+    const questions = [title, whatMotiv, why, whatSolved, whatLearned, runInstructions, license];
     //below uses JSON to turn the array from [2] into a string
     const jsonStringData = JSON.stringify(questions, null, 2);
     const fileName = "newfile.txt";
