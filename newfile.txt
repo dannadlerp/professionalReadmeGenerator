@@ -5,5 +5,5 @@
   "What did the App resolve? 4",
   "What was learned from the App development: 5",
   "Instructions to run App: 6",
-  "App License: MIT"
+  "App License: "
 ]

@@ -2,11 +2,13 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { argv } = require('process');
+const markdown = import('../generateMarkdown.js')
 
 // TODO: Create a function to initialize app
 function init() {
     
 //let answers = [];
+
 inquirer
 .prompt([
     {
@@ -55,11 +57,11 @@ inquirer
     const questions = [title, whatMotiv, why, whatSolved, whatLearned, runInstructions, license];
     //below uses JSON to turn the array from [2] into a string
     const jsonStringData = JSON.stringify(questions, null, 2);
-    const fileName = "newfile.txt";
+    const fileName = "README.md";
     console.log(fileName);
     
     // TODO: Create a function to write README file
-    fs.writeFileSync('./newfile.txt', jsonStringData), (err) =>
+    fs.writeFileSync(`./${fileName}`, jsonStringData), (err) =>
     err ? console.error(err) : console.log('Success!') //logs any errors
     
     console.log('Answers:', answers);
