@@ -2,7 +2,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { argv } = require('process');
-const markdown = import('../generateMarkdown.js')
+const {markdown} = require('./utils/generateMarkdown.js');
+//import { generateMarkdown} from "./utils/generateMarkdown.js";  //only use with export in module, not require
+const {generateMarkdown} = require('markdown')
 
 // TODO: Create a function to initialize app
 function init() {
@@ -55,9 +57,13 @@ inquirer
     
     //below creates an array with all answers so it can be displayed in the new file
     const questions = [title, whatMotiv, why, whatSolved, whatLearned, runInstructions, license];
+    /* function markdownAnswers(data) {
+        markdown.generateMarkdown(data)
+    } */
+    
     //below uses JSON to turn the array from [2] into a string
-    const jsonStringData = JSON.stringify(questions, null, 2);
-    const fileName = "README.md";
+    const jsonStringData = JSON.stringify(generateMarkdown(answers), null, 2);
+    const fileName = "GeneratedREADME.md";
     console.log(fileName);
     
     // TODO: Create a function to write README file
