@@ -73,5 +73,5 @@ function generateMarkdown(data) {
 ##license:
   `;
 }
-
-module.exports = generateMarkdown;
+// export {generateMarkdown};    //using import/export
+module.exports = {generateMarkdown: generateMarkdown};  //using require/module.exports
