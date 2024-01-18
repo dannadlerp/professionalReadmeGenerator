@@ -1,10 +1,8 @@
-
-Deployed App URL:
-Github repo URL: https://github.com/dannadlerp/professionalReadmeGenerator
-
-
-
 # 09 Node.js Challenge: Professional README Generator
+
+github rep URL: https://github.com/dannadlerp/professionalReadmeGenerator
+walkthrough video URL:
+
 
 ## Your Task
 
