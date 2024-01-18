@@ -2,15 +2,11 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { argv } = require('process');
-const {markdown} = require('./utils/generateMarkdown.js');
 //import { generateMarkdown} from "./utils/generateMarkdown.js";  //only use with export in module, not require
-const {generateMarkdown} = require('markdown')
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create a function to initialize app
 function init() {
-    
-//let answers = [];
-
 inquirer
 .prompt([
     {
@@ -60,14 +56,27 @@ inquirer
     /* function markdownAnswers(data) {
         markdown.generateMarkdown(data)
     } */
+    const markdownLicenseBadge = generateMarkdown.renderLicenseBadge(license);
+    const markdownLicenseLink = generateMarkdown.renderLicenseLink(license);
+
+    const markdownAnswers = generateMarkdown.generateMarkdown(answers);
+    
+    //console.log(markdownAnswers);
+    //console.log(markdownLicenseBadge);
+    //console.log(markdownLicenseLink);
+    const LICENSE_ANSWER = answers.license;
+    LICENSE_ANSWER.forEach(licenseType => {
+        console.log(licenseType)
+    });
     
     //below uses JSON to turn the array from [2] into a string
-    const jsonStringData = JSON.stringify(generateMarkdown(answers), null, 2);
+    const jsonStringData = JSON.stringify(generateMarkdown.generateMarkdown(answers), null, 2);
     const fileName = "GeneratedREADME.md";
     console.log(fileName);
     
     // TODO: Create a function to write README file
-    fs.writeFileSync(`./${fileName}`, jsonStringData), (err) =>
+    //fs.writeFileSync(`./${fileName}`, jsonStringData), (err) =>
+    fs.writeFileSync(`./${fileName}`, JSON.parse(jsonStringData)), (err) =>
     err ? console.error(err) : console.log('Success!') //logs any errors
     
     console.log('Answers:', answers);
@@ -79,11 +88,8 @@ inquirer
 
 function writeToFile(fileName, data) {
     /* fs.writeFile('README.md', process.argv)[2], (err) =>
-    err ? console.error(err) : console.log("hello") */
-    
+    err ? console.error(err) : console.log("hello") */  
 }
-
 }
-
 // Function call to initialize app
 init();
