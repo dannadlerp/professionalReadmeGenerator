@@ -11,27 +11,27 @@
 - [License](#license)
 
 ## Motivation
-Motivation for the project: 2
+11
 
 ## Purpose
-The reason for developement: 3
+11
 
 ## Solution
-What did the App resolve? 4
+22
 
 ## Learnings
-What was learned from the App development: 5
+22
 
 ## Run Instructions
-Instructions to run App: 6
+2
 
 # GitHub
-Access my GitHub profile here: 7
+33
 
 # Email
-Email me at: 8
+33
 
 ## License
-  App License: ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  
   
   

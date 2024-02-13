@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const { argv } = require("process");
 //import { generateMarkdown} from "./utils/generateMarkdown.js";  //only use with export in module, not require
-const generateMarkdown = require("./utils/generateMarkdown.js");
+const {generateMarkdown, renderLicenseBadge} = require("./utils/generateMarkdown.js");
 
 const init = () => {
   inquirer
@@ -59,18 +59,18 @@ const init = () => {
       //assigns variables to each answer that is prompted
 
       title = `App Title: ${answers.title}`;
-      whatMotiv = `Motivation for the project: ${answers.whatMotiv}`;
-      why = `The reason for developement: ${answers.why}`;
-      whatSolved = `What did the App resolve? ${answers.whatSolved}`;
-      whatLearned = `What was learned from the App development: ${answers.whatLearned}`;
-      runInstructions = `Instructions to run App: ${answers.runInstructions}`;
-      gitHub = `Access my GitHub profile here: ${answers.gitHub}`;
-      email = `Email me at: ${answers.email}`;
-      license = `App License: ${answers.license}`;
-      
+      whatMotiv = answers.whatMotiv;
+      why = answers.why;
+      whatSolved = answers.whatSolved;
+      whatLearned = answers.whatLearned;
+      runInstructions = answers.runInstructions;
+      gitHub = answers.gitHub;
+      email = answers.email;
+      license = answers.license;
+      /* 
       const defineLicense = (answers) => {
         console.log(`licenses: ${answers.license}`);
-      };
+      }; */
       //below creates an array with all answers so it can be displayed in the new file
       const questions = [
         title,
@@ -83,21 +83,21 @@ const init = () => {
         email,
         license,
       ];
-
-      const markdownLicenseBadge = generateMarkdown.renderLicenseBadge(license);
+const licenseBadgeData = renderLicenseBadge(answers.license);
+/*       const markdownLicenseBadge = generateMarkdown.renderLicenseBadge(license);
       const markdownLicenseLink = generateMarkdown.renderLicenseLink(license);
 
-      const markdownAnswers = generateMarkdown.generateMarkdown(answers);
+      const markdownAnswers = generateMarkdown.generateMarkdown(answers); */
 
 /*       const selectedLicenses = answers.license;
       console.log("Selected licenses:", selectedLicenses); */
 
       //below uses JSON to turn the array from [2] into a string
       const jsonStringData = JSON.stringify(
-        generateMarkdown.generateMarkdown(answers), null, 2);
+        generateMarkdown(answers, licenseBadgeData), null, 2);
       const fileName = "GeneratedREADME.md";
       console.log(`Generated file: ${fileName}`);
-      defineLicense;
+      //defineLicense;
       
       fs.writeFileSync(`./${fileName}`, JSON.parse(jsonStringData)),
         (err) => (err ? console.error(err) : console.log("Success!")); //logs any errors
