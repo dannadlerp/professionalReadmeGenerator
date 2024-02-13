@@ -1,4 +1,4 @@
-const { title } = require('process');
+//const { title } = require('process');
 
 // If there is no license, return an empty string
 function renderLicenseBadge(licenseData) {
@@ -35,8 +35,9 @@ function renderLicenseLink(licenseData) {
   }
 }
 
-function generateMarkdown(data, licenseBadgeData) {
-  console.log(`license data? ${licenseBadgeData}`);
+function generateMarkdown(data) {
+  console.log(`license data? ${data.license}`);
+  renderLicenseBadge(data.license)
   return `
 ${data.title}
 # Table of Contents
@@ -71,7 +72,7 @@ ${gitHub}
 ${email}
 
 ## License
-  ${licenseBadgeData}
+  ${data.license}
   
   `;
 }

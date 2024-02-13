@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const { argv } = require("process");
 //import { generateMarkdown} from "./utils/generateMarkdown.js";  //only use with export in module, not require
-const {generateMarkdown, renderLicenseBadge} = require("./utils/generateMarkdown.js");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
 const init = () => {
   inquirer
@@ -48,7 +48,7 @@ const init = () => {
       },
 
       {
-        type: "checkbox",
+        type: "list",
         name: "license",
         choices: ["MIT", "GPLv3", "LGPLv3"],
         message: "What kind of license does the project have?",
@@ -83,7 +83,7 @@ const init = () => {
         email,
         license,
       ];
-const licenseBadgeData = renderLicenseBadge(answers.license);
+
 /*       const markdownLicenseBadge = generateMarkdown.renderLicenseBadge(license);
       const markdownLicenseLink = generateMarkdown.renderLicenseLink(license);
 
@@ -94,7 +94,7 @@ const licenseBadgeData = renderLicenseBadge(answers.license);
 
       //below uses JSON to turn the array from [2] into a string
       const jsonStringData = JSON.stringify(
-        generateMarkdown(answers, licenseBadgeData), null, 2);
+        generateMarkdown.generateMarkdown(answers), null, 2);
       const fileName = "GeneratedREADME.md";
       console.log(`Generated file: ${fileName}`);
       //defineLicense;
