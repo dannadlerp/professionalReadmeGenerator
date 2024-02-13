@@ -9,15 +9,15 @@ function renderLicenseBadge(license) {
   } else
   if(license === "MIT") {
     //return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-    licenseBadge =  "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+    licenseBadge =  "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
   } else
   if(license === "GPLv3") {
     //return "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
-    licenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+    licenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)";
   } else
   if(license === "LGPLv3") {
     //return "![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
-    licenseBadge = "[![License: LGPL v3](https://img.shields.io/badge/License-LGPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
+    licenseBadge = "[![License: LGPL v3](https://img.shields.io/badge/License-LGPLv3-blue.svg)";
   }
 }
 let licenceTag = "#license";
