@@ -1,9 +1,0 @@
-[
-  "App Title: 1",
-  "Motivation for the project: 2",
-  "The reason for developement: 3",
-  "What did the App resolve? 4",
-  "What was learned from the App development: 5",
-  "Instructions to run App: 6",
-  "App License: "
-]
