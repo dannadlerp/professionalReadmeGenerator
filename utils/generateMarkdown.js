@@ -8,16 +8,16 @@ function renderLicenseBadge(license) {
     return "";
   } else
   if(license === "MIT") {
-    return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-    licenseBadge =  "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+    //return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+    licenseBadge =  "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
   } else
   if(license === "GPLv3") {
-    return "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
-    licenseBadge = "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+    //return "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+    licenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
   } else
   if(license === "LGPLv3") {
-    return "![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
-    licenseBadge =  "![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
+    //return "![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
+    licenseBadge = "[![License: LGPL v3](https://img.shields.io/badge/License-LGPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
   }
 }
 let licenceTag = "#license";
@@ -53,31 +53,38 @@ function generateMarkdown(data) {
   renderLicenseBadge(data.license)
   return `
 ${data.title}
-Table of Contents
-  -What was the motiv?
-  -Why was the app made?
-  -What did the app solve?
-  -What was learned?
-  -Run instructions
-  -License of app
-  
+# Table of Contents
+- [Motivation](#motivation)
+- [Purpose](#purpose)
+- [Solution](#solution)
+- [Learnings](#learnings)
+- [Run Instructions](#run-instructions)
+- [Github Repository](#gitHub)
+- [Email](#email)
+- [License](#license)
 
- 
-  ${whatMotiv}
-  
+## Motivation
+${whatMotiv}
 
-  ${why}
-  
+## Purpose
+${why}
 
-  ${whatSolved}
-  
+## Solution
+${whatSolved}
 
-  ${whatLearned}
-  
+## Learnings
+${whatLearned}
 
-  ${runInstructions}
-  
+## Run Instructions
+${runInstructions}
 
+# GitHub
+${gitHub}
+
+# Email
+${email}
+
+## License
   ${license}${licenseBadge}
   
   `;

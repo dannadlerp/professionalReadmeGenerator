@@ -1,8 +1,7 @@
 # 09 Node.js Challenge: Professional README Generator
 
 github rep URL: https://github.com/dannadlerp/professionalReadmeGenerator
-walkthrough video URL:
-
+Walkthrough video URL: https://drive.google.com/file/d/1ym_-rG7oz2zuT7rumGcU66oxRZMhuAe2/view?usp=sharing
 
 ## Your Task
 
