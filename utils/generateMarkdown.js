@@ -7,11 +7,11 @@ function renderLicenseBadge(licenseData) {
   if (licenseData === "") {
     return "";
   } else if (licenseData === "MIT") {
-    licenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
+    licenseBadge = "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
   } else if (licenseData === "GPLv3") {
-    licenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)";
+    licenseBadge = "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)";
   } else if (licenseData === "LGPLv3") {
-    licenseBadge = "[![License: LGPL v3](https://img.shields.io/badge/License-LGPLv3-blue.svg)";
+    licenseBadge = "![License: LGPL v3](https://img.shields.io/badge/License-LGPLv3-blue.svg)";
   }
 
   return licenseBadge;
@@ -36,7 +36,7 @@ function renderLicenseLink(licenseData) {
 }
 
 function generateMarkdown(data, licenseBadgeInfo) {
-  const licenseBadge = renderLicenseBadge(licenseBadgeInfo);
+  const licenseBadge = renderLicenseBadge(licenseBadgeInfo); //have to assign the function to a variable, or else when using the variable later, nothing is returned
   console.log(`license Data: ${licenseBadgeInfo}`);
   console.log(`license badge: ${licenseBadge}`);
   return `
