@@ -2,6 +2,7 @@ github rep URL: https://github.com/dannadlerp/professionalReadmeGenerator
 
 Walkthrough video URL: https://drive.google.com/file/d/1ym_-rG7oz2zuT7rumGcU66oxRZMhuAe2/view?usp=sharing
 
+Sample README file URL: https://github.com/dannadlerp/professionalReadmeGenerator/blob/main/GeneratedREADME.md
 
 Professional README Generator
 # Table of Contents
