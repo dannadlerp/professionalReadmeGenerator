@@ -1,5 +1,5 @@
 
-
+1
 # Table of Contents
 - [Motivation](#motivation)
 - [Purpose](#purpose)
@@ -11,27 +11,27 @@
 - [License](#license)
 
 ## Motivation
-
+2
 
 ## Purpose
-
+1
 
 ## Solution
-
+2
 
 ## Learnings
-
+1
 
 ## Run Instructions
-
+2
 
 # GitHub
-
+45
 
 # Email
-
+2
 
 ## License
-  MIT
+  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
   
   

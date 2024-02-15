@@ -35,9 +35,10 @@ function renderLicenseLink(licenseData) {
   }
 }
 
-function generateMarkdown(data) {
-  console.log(`license data? ${data.license}`);
-  renderLicenseBadge(data.license)
+function generateMarkdown(data, licenseBadgeInfo) {
+  const licenseBadge = renderLicenseBadge(licenseBadgeInfo);
+  console.log(`license Data: ${licenseBadgeInfo}`);
+  console.log(`license badge: ${licenseBadge}`);
   return `
 ${data.title}
 # Table of Contents
@@ -72,7 +73,7 @@ ${gitHub}
 ${email}
 
 ## License
-  ${data.license}
+  ${licenseBadge}
   
   `;
 }

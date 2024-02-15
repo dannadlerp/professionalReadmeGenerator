@@ -94,7 +94,7 @@ const init = () => {
 
       //below uses JSON to turn the array from [2] into a string
       const jsonStringData = JSON.stringify(
-        generateMarkdown.generateMarkdown(answers), null, 2);
+        generateMarkdown.generateMarkdown(answers, answers.license), null, 2);
       const fileName = "GeneratedREADME.md";
       console.log(`Generated file: ${fileName}`);
       //defineLicense;
