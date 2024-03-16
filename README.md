@@ -4,6 +4,7 @@ Walkthrough video URL: https://drive.google.com/file/d/1ym_-rG7oz2zuT7rumGcU66ox
 
 Sample README file URL: https://github.com/dannadlerp/professionalReadmeGenerator/blob/main/GeneratedREADME.md
 
+
 Professional README Generator
 # Table of Contents
 - [Motivation](#motivation)
